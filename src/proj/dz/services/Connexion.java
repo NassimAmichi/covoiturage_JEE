@@ -21,7 +21,7 @@ import proj.dz.dao.AnnonceurDaoLocal;
 @Path("/connexion")
 public class Connexion  extends Application 
 {
-	int num_user;
+	int num_user2;
 	@EJB
 	private AnnonceurDaoLocal annonceurDao;
 	@Context
@@ -37,8 +37,8 @@ public class Connexion  extends Application
 		response.setHeader("Access-Control-Allow-Methods", "OPTIONS, GET, POST, PUT, DELETE");
 		response.setHeader("'text/plain; charset=utf-8'", "Content-Type");
 		response.setCharacterEncoding("ISO8859-1");	
-		num_user= annonceurDao.connexion(nom,get_SHA_512_SecurePassword(passe,"tt")); 
-		return num_user;
+		num_user2= annonceurDao.connexion(nom,get_SHA_512_SecurePassword(passe,"tt")); 
+		return num_user2;
 	}
 	//@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 	
@@ -54,11 +54,11 @@ public class Connexion  extends Application
 		final String separator = " ";
         String passwords_user[] = account.split(separator);
  
-        num_user= annonceurDao.connexion(passwords_user[0],get_SHA_512_SecurePassword(passwords_user[1],"tt")); 
+        num_user2= annonceurDao.connexion(passwords_user[0],get_SHA_512_SecurePassword(passwords_user[1],"tt")); 
         
         System.out.println("connnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn_poste nouvelle");
         
-		return 	num_user;
+		return 	num_user2;
 	}
 	//@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 	
