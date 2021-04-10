@@ -56,7 +56,7 @@ public class Connexion  extends Application
  
         num_user2= annonceurDao.connexion(passwords_user[0],get_SHA_512_SecurePassword(passwords_user[1],"tt")); 
         
-        System.out.println("connnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn_poste nouvelle");
+        System.out.println("connnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn_poste nouvell");
         
 		return 	num_user2;
 	}
